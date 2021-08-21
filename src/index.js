@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
 import "./index.css";
 import App from "./App";
@@ -8,9 +8,9 @@ import { FavoritesContextProvider } from "./store/favorites-context";
 
 ReactDOM.render(
   <FavoritesContextProvider>
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       <App />
-    </BrowserRouter>
+    </HashRouter>
   </FavoritesContextProvider>,
   document.getElementById("root")
 );
